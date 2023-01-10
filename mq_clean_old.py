@@ -141,7 +141,6 @@ def check_installed_mq_packages(rpm_suffix):
     output, error = process.communicate()
 
     # Check the return code of the rpm command 
-    # How to rebuild the RPM database - https://wiki.cerner.com/pages/releaseview.action?spaceKey=CRC&title=How%20to%20Rebuild%20the%20RPM%20Database
     if process.returncode != 0:
         logger.error("ERROR: Unable to communicate with the RPM database. The rpm command returned a non-zero exit code.")
         return []
